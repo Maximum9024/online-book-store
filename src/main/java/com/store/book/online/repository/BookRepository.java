@@ -7,4 +7,6 @@ import com.store.book.online.model.Book;
 
 @Repository
 public interface BookRepository extends CrudRepository<Book, String>{
+	public Book findBookByName(String name);
+	public boolean existsByName(String name);
 }
