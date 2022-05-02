@@ -7,5 +7,9 @@ import com.store.book.online.model.User;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, String> {
+	public User findById(long id);
+	public User findUserByEmail(String email);
+	public boolean existsByEmail(String email);
+	
 
 }
